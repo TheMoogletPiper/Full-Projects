@@ -1,0 +1,94 @@
+
+<!-- Sistema de biblioteca. 
+
+Hacer una app que ofrezca Altas, Bajas, Modificaciones y Consultas de socios de una biblioteca. 
+Ademas la app tendra una Tabla de Libros que podran asi mismo ser objeto de CRUD. 
+Los socios pueden sacar hasta 3 libros prestados. Los libros se prestan por 10 dias. 
+Si alguien tiene libros sin devolver se le deniega el prestamo.
+
+Los datos por asociado son: Asociado[socio_id, nombre completo, direccion, telefono, email], los datos por libro:
+Libro[libro_id, titulo, autor, ISBN, estado] Donde estado es si esta en prestamo o no.
+
+La app debe mostrar ademas todos los libros en prestamo, la lista de socios y la lista de morosos.
+
+ -->
+
+<!-- 
+
+INDICE. PRIMERA PÁGINA QUE VAMOS A MOSTRAR EN LA CUAL SE MUESTRAN LAS OPCIONES DE AÑADIR UN NUEVO SOCIO,
+UN NUEVO LIBRO, MOSTRAR A LOS SOCIOS Y MOSTRAR LOS LIBROS.
+
+A PARTIR DE CADA UNA DE ESTAS PÁGINAS PODREMOS ACCEDER A CADA UNO DE LOS DIFERENTES MÉTODOS PEDIDOS.
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="WebStyle.css">
+<title>Página principal</title>
+</head>
+<body style="background-color:#cadc9f; font-family:Arial;">
+
+<header class="w3-container w3-teal" style="max-height:124px">
+
+<nav>
+<div style="max-height:120px" class="parent">
+<b style="font-size:40px;position:relative; top:15px">Froggie's bookshelf</b>
+<p style="font-size:20px">By &lt;ht:f&gt;</p>
+
+<div class=child style="display:flex;flex-wrap:nowrap;width:334px;height:64px;justify-content:space-around">
+	
+	<div style="margin-left:1em; margin-bottom:2em" class="tooltip">
+		<span class="tooltiptext">Nuevo socio</span>
+		<a href="Web3103.jsp?opcion=4">
+			<i style="background:url('newuser.png'); height:64px; width:64px; display:block">
+			</i>
+		</a>
+	</div>
+	
+	<div style="margin-left:1em; margin-bottom:2em" class="tooltip">
+		<span class="tooltiptext">Nuevo libro</span>
+		<a href="Web3103.jsp?opcion=5">
+			<i style="background:url('newbook.png'); height:64px; width:64px; display:block">
+			</i>
+		</a>
+	</div>
+	
+	<div style="margin-left:1em; margin-bottom:2em" class="tooltip">
+		<span class="tooltiptext">Mostrar socios</span>
+		<a href="Web3103Servlet?opcion=3">
+			<i style="background:url('reader.png'); height:64px; width:64px; display:block">
+			</i>
+		</a>
+	</div>
+	
+	<div style="margin-left:1em; margin-bottom:2em" class="tooltip">
+		<span class="tooltiptext">Mostrar libros</span>
+		<a href="Web3103Servlet?opcion=4">
+			<i style="background:url('bookshelf.png'); height:64px; width:64px; display:block">
+			</i>
+		</a>
+	</div>
+</div>
+
+</div>
+
+</nav>
+</header>
+
+<div class="w3-animate-bottom" style="text-align:center">
+<br>
+<br>
+<h1 >Bienvenido a Froggie's bookshelf!</h1><br><br>
+<h2>Esta página ofrece un servicio de almacenamiento 
+de socios y libros en una DB.</h2>
+<h3>Además podrás realizar préstamos y ver los préstamos de cada socio, todo conectado a la DB.</h3>
+<br><br>
+<br>
+<b style="font-size:50px">&#x1F438;</b>
+</div>
+</body>
+</html>
